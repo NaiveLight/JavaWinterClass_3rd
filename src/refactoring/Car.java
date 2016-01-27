@@ -6,6 +6,7 @@ public abstract class Car {
 	public abstract void drive();	
 	public abstract void Break();
 	public abstract void turnOff();
+	public abstract String getString();
 	
 	public final void run(){
 		start();
@@ -15,10 +16,10 @@ public abstract class Car {
 		System.out.println("");
 	}
 
-	public String 
+	
 	public final void washCar(){
-		String str = Car.getString();
-		System.out.println("washCar()");
+		String str = getString();
+		System.out.println(str+" washCar()");
 		System.out.println("");
 	}
 }
