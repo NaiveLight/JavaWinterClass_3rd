@@ -6,7 +6,7 @@ public abstract class Display {
 	public abstract void display();
 	public abstract void end();
 	
-	//final = 변수에 사용하면 상수가 됨 , 
+	//final = 변수에 사용하면 값 변경이 불가능한 상수가 됨 , 
 	//method에 사용하면 하위 클래스에서 overriding 불가, 
 	//class에서 사용하면 상속 불가
 	
