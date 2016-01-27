@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Board {
 
+	public static int index;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PlayerDataBase playerdata = PlayerDataBase.getInstance();
@@ -32,6 +34,7 @@ public class Board {
 				lev3.play();
 				break;
 			}
+			index++;
 		}
 			
 	}

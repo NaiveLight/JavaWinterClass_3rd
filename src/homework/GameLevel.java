@@ -7,13 +7,8 @@ public abstract class GameLevel {
 	public abstract void simpleAttack();
 	public abstract void turnAttack();
 	public abstract void flyingAttack();
-	
-	PlayerDataBase playerdata = PlayerDataBase.getInstance();
-	private ArrayList<Player> playerList = playerdata.getPlayerList();
-	;
-	private String name;
-	private int level;
-	private int index;
+	private int index = Board.index;
+	private ArrayList<Player> playerList;
 	
 	public void play(){
 		start();
@@ -24,14 +19,20 @@ public abstract class GameLevel {
 	}
 	
 	public void start(){
-		name = playerList.get(index).getplayerName();
-		level = playerList.get(index).getGameLevel();
-		System.out.println("level " + level + " " + name + " 의  Attack 시작");
+		PlayerDataBase playerdata = PlayerDataBase.getInstance();
+		playerList = playerdata.getPlayerList();
+		String name = playerList.get(index).getplayerName();
+		int level = playerList.get(index).getGameLevel();
+		
+		System.out.println(level + " " + name + " 의  Attack 시작");
 	}
 	
 	public void end(){
-		name = playerList.get(index).getplayerName();
-		level = playerList.get(index++).getGameLevel();
-		System.out.println("level " + level + " " + name + " 의  Attack 종료");
+		PlayerDataBase playerdata = PlayerDataBase.getInstance();
+		playerList = playerdata.getPlayerList();
+		String name = playerList.get(index).getplayerName();
+		int level = playerList.get(index).getGameLevel();
+		
+		System.out.println(level + " " + name + " 의  Attack 종료");
 	}
 }
